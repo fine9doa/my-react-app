@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react()],
-  base: mode === 'production' 
-    ? '/2026/ai_project/ai_test_5차/doa_new/claude_react_complete/dist/' 
-    : '/',
+  base: '/',   // 🔥 이걸로 고정
   server: {
     port: 3000,
     open: true
@@ -15,4 +13,4 @@ export default defineConfig(({ mode }) => ({
     assetsDir: 'assets',
     emptyOutDir: true
   }
-}))
+})
